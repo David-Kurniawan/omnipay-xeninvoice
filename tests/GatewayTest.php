@@ -23,7 +23,7 @@ class GatewayTest extends TestCase
 
         $this->gateway = new Gateway($this->getHttpClient(), $this->getHttpRequest());
 
-        $this->gateway->setSecretApiKey('xnd_development_tAdNnWVxTrbu1NRlFkAYVvLO66LtnWIdxeaVmzB59y4DHjy3z8iDlYNNCl14Df');
+        $this->gateway->setSecretApiKey('YourSecretApiKey');
     }
 
     /**
@@ -31,7 +31,7 @@ class GatewayTest extends TestCase
      */
     public function testChannel()
     {
-        $this->gateway->setForUserId('601aeedb25591a3d074d0c10'); // If u want to use xenPlatform
+        // $this->gateway->setForUserId('xxxxxxxxxxxxxxxxxxxxxxxx'); // If u want to use xenPlatform
         $response = $this->gateway->channel()->send();
         error_log(print_r($response->getData(), TRUE), 3, "./error.log");
 
@@ -45,8 +45,8 @@ class GatewayTest extends TestCase
     {
         $orderId = 'eyVha'.time();
 
-        $this->gateway->setForUserId('601b0ead60654f15c80f667e'); // If u want to use xenPlatform
-        $this->gateway->setWithFeeRule('xpfeeru_db3a6542-b65f-4d9a-b23c-c1a630c396e3'); // If u want to use xenPlatform
+        // $this->gateway->setForUserId('xxxxxxxxxxxxxxxxxxxxxxxx'); // If u want to use xenPlatform
+        // $this->gateway->setWithFeeRule('xxxxxxxxxxxxxxxxxxxxxxxx-b65f-4d9a-b23c-c1a630c396e3'); // If u want to use xenPlatform
         // Params
         $this->gateway->setParameter('external_id', $orderId);
         $this->gateway->setParameter('payer_email', 'idozsambas@gmail.com');
