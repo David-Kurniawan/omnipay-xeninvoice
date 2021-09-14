@@ -1,0 +1,5 @@
+/vendor/
+.git
+composer.lock
+error.log
+**/.DS_Store
