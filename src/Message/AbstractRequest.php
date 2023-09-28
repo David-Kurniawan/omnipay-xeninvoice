@@ -93,7 +93,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     public function getSuccessRedirectUrl ()
     {
-        return $this->getParameter('invoice_duration');
+        return $this->getParameter('success_redirect_url');
     }
 
     public function setSuccessRedirectUrl($url)
