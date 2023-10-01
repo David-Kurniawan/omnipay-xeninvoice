@@ -91,13 +91,23 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('invoice_duration', $duration);
     }
 
+    public function getSuccessRedirectUrl ()
+    {
+        return $this->getParameter('success_redirect_url');
+    }
+
+    public function setSuccessRedirectUrl($url)
+    {
+        return $this->setParameter('success_redirect_url', $url);
+    }
+
     protected function purchaseGuardParameters()
     {
         $this->validate(
             'external_id',
             'payer_email',
             'description',
-            'amount'
+            'amount',
         );
     }
 }
